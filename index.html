@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Pen Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="atelier-wrapper">
+        <aside class="panel">
+            <header>
+                <h1>Pixel<span>Pen</span></h1>
+                <p>I try something..</p>
+            </header>
+
+            <div class="tool-case">
+                <div class="control-item">
+                    <label>Color</label>
+                    <div class="ink-well">
+                        <input type="color" id="colorPicker" value="#FF6600">
+                    </div>
+                </div>
+
+                <div class="control-item">
+                    <label>Thickness</label>
+                    <div class="thickness-gauge">
+                        <span id="thicknessValue">1</span>
+                        <small>px</small>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn btn-draw" onclick="bakeCurve()">Draw</button>
+                    <button class="btn btn-clear" onclick="pixels.fill(null)">Clear</button>
+                </div>
+            </div>
+
+            <footer class="manual">
+                <p><span>MouseWheel:</span> Brush size</p>
+                <p><span>Drag:</span> Control points</p>
+            </footer>
+        </aside>
+
+        <main class="drawing-zone">
+            <div class="canvas-frame">
+                <canvas id="cvs" width="700" height="700"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
