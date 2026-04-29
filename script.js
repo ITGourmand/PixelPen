@@ -152,7 +152,6 @@ function loop() {
     }
   }
 
-  // 3. Grille (plus discrète, ton bois/papier)
   ctx.strokeStyle = "rgba(68, 36, 0, 0.25)";
   for (let i = 0; i <= GRID; i++) {
     ctx.beginPath();
@@ -217,7 +216,6 @@ function loop() {
     ctx.fillRect(tx * CELL, ty * CELL, CELL, CELL);
   });
 
-  // 5. Poignées de contrôle (plus élégantes)
   for (let k in pts) {
     ctx.fillStyle = (k === 'start' || k === 'end') ? "#4a3623" : "#fff";
     ctx.strokeStyle = "#4a3623";
@@ -227,8 +225,7 @@ function loop() {
     ctx.fill();
     ctx.stroke();
   }
-  
-  // Mise à jour de l'affichage de l'épaisseur
+
   const thicknessEl = document.getElementById("thicknessValue");
   if(thicknessEl) thicknessEl.innerText = thickness;
 
